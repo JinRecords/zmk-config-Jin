@@ -18,13 +18,12 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000
 
-&mmv {
-    acceleration-exponent = <1>;      // 1
-    time-to-max-speed-ms = <2000>;     // 40
-    delay-ms = <0>;                   // 0
-};
+#define U_MOUSE_MOVE_MAX 3000
+#define MM_U MOVE_Y(-U_MOUSE_MOVE_MAX)
+#define MM_D MOVE_Y(U_MOUSE_MOVE_MAX)
+#define MM_L MOVE_X(-U_MOUSE_MOVE_MAX)
+#define MM_R MOVE_X(U_MOUSE_MOVE_MAX)
 
 &soft_off {
     hold-time-ms = <500>; // Only turn off it the key is held for 5 seconds or longer.
@@ -40,6 +39,35 @@
         };
     };
 };
+
+    behaviors {
+        // keys to a fake mouse input device
+        mm: mouse_move {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <12>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <30>;
+            acceleration-exponent = <1>;
+        };
+    };
+
+
+    // mapping the fake keys to mouse device tack to the layers
+    mmv_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&mm>;
+        input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer MOUSE 1000>;
+
+        scroll {
+            inherit;
+            layers = <MOUSE>;
+            input-processors = <&zip_xy_scaler 1 70>, <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
+        };
+    };
+
+
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -178,8 +206,8 @@
         mouseKey {
             bindings = <
 &none  &none  &none           &none           &none            &none                  &none           &none     &none     &none     &none  &none
-&none  &none  &none           &mmv MOVE_UP    &none            &none                  &msc SCRL_UP    &none     &none     &none     &none  &none
-&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                  &msc SCRL_DOWN  &mkp MB1  &mkp MB3  &mkp MB2  &none  &none
+&none  &none  &none           &mm MM_U    &none            &none                  &msc SCRL_UP    &none     &none     &none     &none  &none
+&none  &none  &mm MM_L  &mm MM_D  &mm MOVE_R  &none                  &msc SCRL_DOWN  &mkp MB1  &mkp MB3  &mkp MB2  &none  &none
 &none  &none  &none           &none           &none            &none  &none    &none  &none           &mkp MB4  &none     &mkp MB5  &none  &none
               &none           &none           &none            &none  &none    &none  &none           &none     &none     &none
             >;
