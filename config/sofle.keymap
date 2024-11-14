@@ -19,6 +19,13 @@
 #define RAISE 2
 #define ADJUST 3
 
+#ifndef MOVE_Y
+#define MOVE_Y(n) (0)
+#endif
+#ifndef MOVE_X
+#define MOVE_X(n) (0)
+#endif
+
 #define U_MOUSE_MOVE_MAX 3000
 #define MM_U MOVE_Y(-U_MOUSE_MOVE_MAX)
 #define MM_D MOVE_Y(U_MOUSE_MOVE_MAX)
