@@ -27,7 +27,18 @@
 };
 
 &soft_off {
-    hold-time-ms = <1000>; // Only turn off it the key is held for 5 seconds or longer.
+    hold-time-ms = <500>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
+/ {
+    macros {
+        launch_sndvol: launch_sndvol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(R) &kp S &kp N &kp D &kp V &kp O &kp L &kp DOT &kp E &kp X &kp E &kp ENTER>;
+            wait-ms = <20>;
+        };
+    };
 };
 
 / {
@@ -37,8 +48,8 @@
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -56,14 +67,44 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC    &kp N1   &kp N2    &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7         &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
-&kp TAB    &kp Q    &kp W     &kp E     &kp R      &kp T                                   &kp Y      &kp U          &kp I      &kp O      &kp P     &lt 6 SQT
-&mo 4      &kp A    &kp S     &kp D     &kp F      &kp G                                   &kp H      &kp J          &kp K      &kp L      &kp SEMI  &kp BSPC
-&kp LSHFT  &lt 5 Z  &kp X     &kp C     &kp V      &kp B    &rgb_ug RGB_TOG    &kp C_MUTE  &kp N      &kp M          &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
-                    &kp LGUI  &kp LALT  &kp LCTRL  &kp RET  &mo 1              &mo 2       &kp SPACE  &kp RIGHT_GUI  &kp RALT   &kp RCTRL
+&kp ESC    &kp N1   &kp N2    &kp N3    &kp N4     &kp N5                                                           &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
+&kp TAB    &kp Q    &kp W     &kp E     &kp R      &kp T                                                            &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
+&mo 6      &kp A    &kp S     &kp D     &kp F      &kp G                                                            &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 1
+&kp LSHFT  &lt 7 Z  &kp X     &kp C     &kp V      &kp B            &rgb_ug RGB_TOG    &kp C_MUTE                   &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
+                    &kp LGUI  &kp LALT  &kp LCTRL  &mt LS(RET) RET  &mo 3              &mt LC(BACKSPACE) BACKSPACE  &kp SPACE  &mo 4   &kp RALT   &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN &inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        MacOS {
+            display-name = "Qwerty Mac";
+            bindings = <
+&kp ESC    &kp N1   &kp N2     &kp N3    &kp N4         &kp N5                                                              &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
+&kp TAB    &kp Q    &kp W      &kp E     &kp R          &kp T                                                               &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
+&mo 6      &kp A    &kp S      &kp D     &kp F          &kp G                                                               &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 2
+&kp LSHFT  &lt 7 Z  &kp X      &kp C     &kp V          &kp B               &rgb_ug RGB_TOG    &kp C_MUTE                   &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
+                    &kp LCTRL  &kp LALT  &kp RIGHT_GUI  &mt LS(RET) RETURN  &mo 3              &mt LG(BACKSPACE) BACKSPACE  &kp SPACE  &mo 4   &kp RALT   &kp RCTRL
+            >;
+
+            sensor-bindings =
+                <&inc_dec_msc SCRL_UP SCRL_DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+        Game {
+            display-name = "Game";
+            bindings = <
+&kp ESC         &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                                     &kp N6     &kp N7  &kp N8     &kp N9     &kp N0    &kp C_PLAY_PAUSE
+&kp TAB         &kp Q   &kp W     &kp E     &kp R      &kp T                                                      &kp Y      &kp U   &kp I      &kp O      &kp P     &kp SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F      &kp G                                                      &kp H      &kp J   &kp K      &kp L      &kp SEMI  &to 0
+&kp LSHFT       &kp Z   &kp X     &kp C     &kp V      &kp B      &rgb_ug RGB_TOG    &kp C_MUTE                   &kp N      &kp M   &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
+                        &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &lt 3 SPACE        &mt LC(BACKSPACE) BACKSPACE  &kp ENTER  &mo 4   &kp RALT   &kp RCTRL
+            >;
+
+            sensor-bindings =
+                <&inc_dec_msc SCRL_UP SCRL_DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
@@ -99,7 +140,7 @@
             //              |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans     &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &trans     &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans   &launch_sndvol
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                             &kp PG_UP  &trans          &kp UP            &trans      &kp N0   &kp PRINTSCREEN
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                           &kp PG_DN  &kp LEFT        &kp DOWN          &kp RIGHT   &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &soft_off  &trans     &trans          &trans            &trans      &trans   &trans
@@ -114,21 +155,21 @@
         Adjust_layer {
             display-name = "Adjust";
             bindings = <
-&bt BT_CLR                       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &out OUT_TOG  &none  &none  &none  &none  &none
-&ext_power EXT_POWER_TOGGLE_CMD  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none         &none  &none  &none  &none  &none
-&none                            &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none                            &none         &none  &none  &none  &none  &none
-&none                            &none            &none            &none            &none            &none            &none    &none  &none         &none  &none  &none  &none  &none
-                                                  &none            &none            &none            &none            &none    &none  &none         &none  &none  &none
+&bt BT_CLR        &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                     &out OUT_TOG  &none  &none  &none  &none  &none
+&ext_power EP_ON  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                  &none         &none  &none  &none  &none  &none
+&none             &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &none                            &none         &none  &none  &none  &none  &none
+&none             &none            &none            &none            &none            &none            &none    &none  &none         &none  &none  &none  &none  &none
+                                   &none            &none            &none            &none            &none    &none  &none         &none  &none  &none
             >;
         };
 
         yabai {
             bindings = <
-&none  &none  &none                       &none                       &none                        &none                                  &none  &none          &none              &none              &none  &none
-&none  &none  &none                       &kp LA(LC(LG(UP_ARROW)))    &none                        &none                                  &none  &none          &kp LC(LG(LA(I)))  &none              &none  &none
-&none  &none  &kp LA(LC(LG(LEFT_ARROW)))  &kp LC(LG(LA(DOWN_ARROW)))  &kp LA(LC(LG(RIGHT_ARROW)))  &none                                  &none  &kp LG(LA(J))  &kp LA(LG(LC(K)))  &kp LA(LC(LG(L)))  &none  &none
-&none  &none  &none                       &none                       &none                        &none                  &none    &none  &none  &none          &none              &none              &none  &none
-              &none                       &none                       &none                        &kp LA(LC(LG(ENTER)))  &none    &none  &none  &none          &none              &none
+&kp K_LOCK  &kp K_SCREENSAVER  &kp C_BRI_UP                &kp C_BRI_DN                &kp LC(UP_ARROW)             &kp LG(SPACE)                          &none  &none              &none              &none              &none  &none
+&none       &none              &none                       &kp LA(LC(LG(UP_ARROW)))    &none                        &none                                  &none  &none              &kp LC(LG(LA(I)))  &none              &none  &none
+&none       &none              &kp LA(LC(LG(LEFT_ARROW)))  &kp LC(LG(LA(DOWN_ARROW)))  &kp LA(LC(LG(RIGHT_ARROW)))  &none                                  &none  &kp LG(LA(LC(J)))  &kp LA(LG(LC(K)))  &kp LA(LC(LG(L)))  &none  &none
+&none       &none              &none                       &none                       &none                        &none                  &none    &none  &none  &none              &none              &none              &none  &none
+                               &none                       &none                       &none                        &kp LA(LC(LG(ENTER)))  &none    &none  &none  &none              &none              &none
             >;
 
             label = "yabai";
@@ -147,18 +188,6 @@
             sensor-bindings =
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
-        };
-
-        System {
-            bindings = <
-&kp K_LOCK  &kp K_SCREENSAVER  &kp C_BRI_UP  &kp C_BRI_DN  &kp LC(UP_ARROW)  &kp LG(SPACE)                  &none  &none  &none  &none  &none  &none
-&none       &none              &none         &none         &none             &none                          &none  &none  &none  &none  &none  &none
-&none       &none              &none         &none         &none             &none                          &none  &none  &none  &none  &none  &none
-&none       &none              &none         &none         &none             &none          &none    &none  &none  &none  &none  &none  &none  &none
-                               &none         &none         &none             &none          &none    &none  &none  &none  &none  &none
-            >;
-
-            label = "Mac";
         };
     };
 };
