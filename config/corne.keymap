@@ -12,6 +12,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 6000
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 15
 
 &led_strip { chain-length = <54>; };
 
