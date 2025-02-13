@@ -148,10 +148,10 @@
 
         Cache {
             bindings = <
-&to 0  &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
-&kp    &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &to 1
-&kp    &kp  &kp  &kp  &kp  &kp    &kp  &kp  &kp  &kp  &kp  &kp
-                 &kp  &kp  &kp    &kp  &kp  &kp
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+&to 0    &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 1
+&to 0    &to 0  &to 0  &to 0  &to 0  &to 0    &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+                 &to 0  &to 0  &to 0    &to 0  &to 0  &to 0
             >;
 
             label = "Mac";
