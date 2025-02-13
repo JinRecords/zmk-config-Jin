@@ -60,9 +60,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LA(LG(TAB))         &kp Q        &kp W           &kp E     &kp R                &kp T    &kp Y                        &kp U      &kp I      &kp O    &kp P     &mt C_PLAY_PAUSE SQT
-&mt LG(LA(TAB)) ESCAPE  &lt 6 A      &kp S           &kp D     &lt 5 F              &kp G    &kp H                        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT               &mt LCTRL Z  &mt LEFT_ALT X  &kp C     &kp V                &kp B    &kp N                        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &to 1
+&kp LA(LG(TAB))         &kp Q        &kp W           &kp E     &kp R                &kp T    &kp Y                        &kp U      &kp I      &kp O              &kp P                   &mt C_PLAY_PAUSE SQT
+&mt LG(LA(TAB)) ESCAPE  &lt 6 A      &kp S           &kp D     &lt 5 F              &kp G    &kp H                        &kp J      &kp K      &kp L              &kp SEMI                &kp SQT
+&kp LSHFT               &mt LCTRL Z  &mt LEFT_ALT X  &kp C     &kp V                &kp B    &kp N                        &kp M      &kp COMMA  &mt RIGHT_ALT DOT  &mt RIGHT_CONTROL FSLH  &to 1
                                                      &kp LGUI  &mt LS(ENTER) ENTER  &mo 2    &mt LA(BACKSPACE) BACKSPACE  &kp SPACE  &mo 3
             >;
         };
@@ -87,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &mt F1 NUMBER_1  &mt F2 NUMBER_2         &mt F3 NUMBER_3    &mt F4 NUMBER_4              &mt F5 NUMBER_5        &mt F6 NUMBER_6      &mt F7 NUMBER_7                  &mt F8 NUMBER_8          &mt F9 NUMBER_9          &mt F10 NUMBER_0       &kp BSPC
-&soft_off  &kp EXCLAMATION  &kp AT_SIGN             &kp HASH           &kp DOLLAR                   &kp PERCENT            &kp CARET            &kp AMPERSAND                    &kp ASTERISK             &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS  &kp PIPE
-&kp LSHFT  &kp EQUAL        &mt LEFT_CONTROL MINUS  &mt LEFT_ALT PLUS  &mt LEFT_COMMAND LEFT_BRACE  &kp RIGHT_BRACE        &kp LEFT_BRACKET     &mt RIGHT_COMMAND RIGHT_BRACKET  &mt RIGHT_ALT SEMICOLON  &mt RIGHT_CONTROL COLON  &kp SLASH              &kp RIGHT_SHIFT
-                                                    &kp LGUI           &studio_unlock               &mt LS(ENTER) ENTER    &mt SPACE BACKSPACE  &trans                           &trans
+&kp TAB    &mt F1 NUMBER_1         &mt F2 NUMBER_2     &mt F3 NUMBER_3    &mt F4 NUMBER_4  &mt F5 NUMBER_5        &mt F6 NUMBER_6      &mt F7 NUMBER_7    &mt F8 NUMBER_8          &mt F9 NUMBER_9       &mt F10 NUMBER_0         &kp BSPC
+&soft_off  &kp EXCLAMATION         &kp AT_SIGN         &kp HASH           &kp DOLLAR       &kp PERCENT            &kp CARET            &kp AMPERSAND      &kp ASTERISK             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp PIPE
+&kp LSHFT  &mt LEFT_CONTROL EQUAL  &mt LEFT_ALT MINUS  &mt LEFT_GUI PLUS  &kp LEFT_BRACE   &kp RIGHT_BRACE        &kp LEFT_BRACKET     &kp RIGHT_BRACKET  &mt RIGHT_GUI SEMICOLON  &mt RIGHT_ALT COLON   &mt RIGHT_CONTROL SLASH  &kp RIGHT_SHIFT
+                                                       &kp LGUI           &studio_unlock   &mt LS(ENTER) ENTER    &mt SPACE BACKSPACE  &trans             &trans
             >;
         };
 
