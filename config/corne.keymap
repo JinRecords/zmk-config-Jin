@@ -104,10 +104,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans        &trans            &trans    &trans     &kp C_PREVIOUS  &mt K_PLAY_PAUSE UP_ARROW  &kp C_NEXT         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&trans                &trans                &trans            &trans        &trans            &trans    &kp PLUS   &kp LEFT_ARROW  &kp DOWN_ARROW             &kp RIGHT_ARROW    &kp C_MUTE         &kp PRINTSCREEN
-&trans                &trans                &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_COMMAND  &trans    &kp MINUS  &sk RIGHT_GUI   &sk RIGHT_ALT              &sk RIGHT_CONTROL  &trans             &trans
-                                                              &trans        &trans            &trans    &trans     &trans          &trans
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &trans    &trans  &trans    &trans     &kp C_PREVIOUS  &mt K_PLAY_PAUSE UP_ARROW  &kp C_NEXT       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&trans                &trans                &trans    &trans    &trans  &trans    &kp PLUS   &kp LEFT_ARROW  &kp DOWN_ARROW             &kp RIGHT_ARROW  &kp C_MUTE         &kp PRINTSCREEN
+&trans                &kp LCTRL             &kp LALT  &kp LGUI  &none   &trans    &kp MINUS  &none           &kp RGUI                   &kp RALT         &kp RCTRL          &trans
+                                                      &trans    &trans  &trans    &trans     &trans          &trans
             >;
 
             label = "Ris";
