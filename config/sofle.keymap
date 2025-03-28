@@ -12,8 +12,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
@@ -210,7 +208,7 @@
 
         Numpad {
             bindings = <
-&none  &none  &none  &none  &none  &none                  &kp KP_NUMLOCK   &kp KP_EQUAL     &kp KP_CLEAR     &kp DELETE       &none        &none
+&none  &none  &none  &none  &none  &none                  &kp KP_NUMLOCK   &kp KP_EQUAL     &kp KP_CLEAR     &kp DELETE       &trans       &none
 &none  &none  &none  &none  &none  &none                  &kp TAB          &kp KP_DIVIDE    &kp KP_ASTERISK  &kp KP_MINUS     &kp KP_PLUS  &none
 &none  &none  &none  &none  &none  &none                  &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_PLUS  &none
 &none  &none  &none  &none  &none  &none  &none    &none  &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT   &kp KP_ENTER
