@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 6000
@@ -60,8 +58,8 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB              &kp Q        &kp W           &kp E     &kp R                &kp T    &kp Y                        &kp U      &kp I      &kp O              &kp P                   &kp P
-&mt LA(LG(ESC)) ESC  &lt 7 A      &kp S           &kp D     &lt 6 F              &kp G    &kp H                        &kp J      &kp K      &kp L              &kp SEMI                &kp SQT
+&mt LA(LG(ESC)) ESC  &kp Q        &kp W           &kp E     &kp R                &kp T    &kp Y                        &kp U      &kp I      &kp O              &kp P                   &kp P
+&mt LA(LG(ESC)) TAB  &lt 7 A      &kp S           &kp D     &lt 6 F              &kp G    &kp H                        &kp J      &kp K      &kp L              &kp SEMI                &kp SQT
 &kp LSHFT            &mt LCTRL Z  &mt LEFT_ALT X  &kp C     &kp V                &kp B    &kp N                        &kp M      &kp COMMA  &mt RIGHT_ALT DOT  &mt RIGHT_CONTROL FSLH  &to 1
                                                   &kp LGUI  &mt LS(ENTER) ENTER  &mo 3    &mt LA(BACKSPACE) BACKSPACE  &kp SPACE  &mo 4
             >;
@@ -137,10 +135,10 @@
 
         yabai {
             bindings = <
-&kp LC(LG(Q))      &kp LS(LG(Q))               &kp C_BRIGHTNESS_DEC        &kp C_BRIGHTNESS_INC         &kp LC(UP_ARROW)       &kp LG(SPACE)    &none  &none              &kp LG(LC(LA(I)))  &none              &none  &kp LA(LG(NUMBER_4))
-&kp LA(LC(LG(A)))  &kp LA(LG(LC(S)))           &kp LA(LC(LG(UP_ARROW)))    &kp LA(LC(LG(X)))            &none                  &none            &none  &kp LG(LC(LA(J)))  &kp LG(LC(LA(K)))  &kp LG(LA(LC(L)))  &none  &none
-&kp LA(LC(LG(Z)))  &kp LA(LC(LG(LEFT_ARROW)))  &kp LA(LG(LC(DOWN_ARROW)))  &kp LA(LG(LC(RIGHT_ARROW)))  &none                  &none            &none  &kp LA(LC(LG(N)))  &none              &kp LG(LC(LA(M)))  &none  &none
-                                                                           &none                        &kp LA(LC(LG(ENTER)))  &none            &none  &none              &none
+&none  &none                       &kp LA(LC(LG(UP_ARROW)))    &none                  &none                  &none    &none  &none              &kp LG(LC(LA(I)))  &none              &none  &none
+&none  &kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LC(LG(DOWN_ARROW)))  &kp LA(LC(LG(RIGHT)))  &none                  &none    &none  &kp LG(LC(LA(J)))  &kp LG(LC(LA(K)))  &kp LG(LA(LC(L)))  &none  &none
+&none  &none                       &kp LA(LG(LC(A)))           &kp LA(LG(LC(S)))      &none                  &none    &none  &kp LA(LC(LG(N)))  &none              &kp LG(LC(LA(M)))  &none  &none
+                                                               &none                  &kp LA(LC(LG(ENTER)))  &none    &none  &none              &none
             >;
 
             label = "Ybai";
