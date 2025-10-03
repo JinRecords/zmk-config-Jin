@@ -33,6 +33,26 @@
     };
 };
 
+behaviors {
+        // Sets the tapping term for all mod-tap keys
+        mt: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Sets the tapping term for all layer-tap keys
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            bindings = <&mo>, <&kp>;
+        };
+    };
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
