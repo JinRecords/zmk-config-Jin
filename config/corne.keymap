@@ -115,10 +115,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &mt F1 NUMBER_1         &mt F2 NUMBER_2     &mt F3 NUMBER_3    &mt F4 NUMBER_4  &mt F5 NUMBER_5        &mt F6 NUMBER_6      &mt F7 NUMBER_7    &mt F8 NUMBER_8          &mt F9 NUMBER_9       &mt F10 NUMBER_0         &kp BSPC
-&soft_off  &kp EXCLAMATION         &kp AT_SIGN         &kp HASH           &kp DOLLAR       &kp PERCENT            &kp CARET            &kp AMPERSAND      &kp ASTERISK             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp PIPE
-&kp LSHFT  &mt LEFT_CONTROL EQUAL  &mt LEFT_ALT MINUS  &mt LEFT_GUI PLUS  &kp LEFT_BRACE   &kp RIGHT_BRACE        &kp LEFT_BRACKET     &kp RIGHT_BRACKET  &mt RIGHT_GUI SEMICOLON  &mt RIGHT_ALT COLON   &mt RIGHT_CONTROL SLASH  &kp RIGHT_SHIFT
-                                                       &kp LGUI           &studio_unlock   &mt LS(ENTER) ENTER    &mt SPACE BACKSPACE  &trans             &trans
+&kp TILDE  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4   &mt F5 NUMBER_5         &mt F6 NUMBER_6        &mt F7 NUMBER_7    &mt F8 NUMBER_8  &mt F9 NUMBER_9  &mt F10 NUMBER_0   &kp BSPC
+&soft_off  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH         &kp DOLLAR        &kp PERCENT             &kp CARET              &kp AMPERSAND      &kp ASTERISK     &kp COLON        &kp DOUBLE_QUOTES  &kp PIPE
+&kp EQUAL  &kp PLUS         &kp MINUS        &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp QUESTION     &kp LESS_THAN      &kp GREATER_THAN
+                                             &kp LGUI         &studio_unlock    &mt LS(ENTER) ENTER     &mt SPACE BACKSPACE    &trans             &trans
             >;
         };
 
@@ -132,10 +132,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans    &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_5))    &trans         &kp C_PREVIOUS  &mt K_PLAY_PAUSE UP_ARROW  &kp C_NEXT       &kp C_VOLUME_DOWN  &mt K_MUTE C_VOLUME_UP
-&trans                &trans                &trans    &trans                &trans                &trans                  &kp LG(EQUAL)  &kp LEFT_ARROW  &kp DOWN_ARROW             &kp RIGHT_ARROW  &kp C_MUTE         &kp PRINTSCREEN
-&trans                &kp LCTRL             &kp LALT  &kp LGUI              &none                 &trans                  &kp LG(MINUS)  &none           &kp RGUI                   &kp RALT         &kp RCTRL          &trans
-                                                      &trans                &trans                &trans                  &trans         &trans          &trans
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_5))    &trans  &kp C_PREVIOUS  &mt K_PLAY_PAUSE UP_ARROW  &kp C_NEXT       &kp C_VOLUME_DOWN  &mt K_MUTE C_VOLUME_UP
+&trans                &trans                &kp LC(MINUS)  &kp LC(NUMBER_0)      &kp LC(EQUAL)         &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW             &kp RIGHT_ARROW  &kp C_MUTE         &kp PRINTSCREEN
+&trans                &kp LCTRL             &kp LALT       &kp LGUI              &none                 &trans                  &trans  &none           &kp RGUI                   &kp RALT         &kp RCTRL          &trans
+                                                           &trans                &trans                &trans                  &trans  &trans          &trans
             >;
 
             label = "Ris";
