@@ -37,7 +37,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&mo>, <&kp>;
 
             flavor = "balanced";
