@@ -30,6 +30,44 @@
             bindings = <&kp LG(R) &kp S &kp N &kp D &kp V &kp O &kp L &kp DOT &kp E &kp X &kp E &kp ENTER>;
             wait-ms = <20>;
         };
+  
+    jiggle_2h: jiggle_2h {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <240000>; // 4 minutes wait between steps
+        tap-ms = <100>;
+        bindings
+            = <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>
+            , <&mmv MOVE_X(3)>
+            , <&mmv MOVE_X(-3)>;
+    };
     };
 
     behaviors {
