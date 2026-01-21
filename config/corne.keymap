@@ -30,44 +30,14 @@
             bindings = <&kp LG(R) &kp S &kp N &kp D &kp V &kp O &kp L &kp DOT &kp E &kp X &kp E &kp ENTER>;
             wait-ms = <20>;
         };
-  
-    jiggle_2h: jiggle_2h {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <240000>; // 4 minutes wait between steps
-        tap-ms = <100>;
-        bindings
-            = <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>
-            , <&mmv MOVE_X(3)>
-            , <&mmv MOVE_X(-3)>;
-    };
+
+        jiggle_2h: jiggle_2h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <240000>; // 4 minutes wait between steps
+            tap-ms = <100>;
+            bindings = <&mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3)>;
+        };
     };
 
     behaviors {
@@ -171,7 +141,7 @@
 
             bindings = <
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans         &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_5))    &trans  &kp C_PREVIOUS  &mt K_PLAY_PAUSE UP_ARROW  &kp C_NEXT       &kp C_VOLUME_DOWN  &mt K_MUTE C_VOLUME_UP
-&trans                &trans                &kp LC(MINUS)  &kp LC(NUMBER_0)      &kp LC(EQUAL)         &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW             &kp RIGHT_ARROW  &kp C_MUTE         &kp PRINTSCREEN
+&jiggle_2h            &trans                &kp LC(MINUS)  &kp LC(NUMBER_0)      &kp LC(EQUAL)         &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW             &kp RIGHT_ARROW  &kp C_MUTE         &kp PRINTSCREEN
 &trans                &kp LCTRL             &kp LALT       &kp LGUI              &none                 &trans                  &trans  &none           &kp RGUI                   &kp RALT         &kp RCTRL          &trans
                                                            &trans                &trans                &trans                  &trans  &trans          &trans
             >;
