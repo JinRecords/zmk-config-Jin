@@ -36,7 +36,7 @@
             #binding-cells = <0>;
             wait-ms = <240000>; // 4 minutes wait between steps
             tap-ms = <100>;
-            bindings = <&mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3) &mmv MOVE_X(3) &mmv MOVE_X(-3)>;
+            bindings = <&mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30) &mmv MOVE_X(30) &mmv MOVE_X(-30)>;
         };
     };
 
