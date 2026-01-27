@@ -87,7 +87,7 @@
             bindings = <
 &mt LA(LG(ESC)) ESC  &kp Q             &kp W               &kp E           &kp R                &kp T      &kp Y                        &kp U            &kp I            &kp O                &kp P                      &kp P
 &mt LA(LG(ESC)) TAB  &mt LEFT_SHIFT A  &mt LEFT_CONTROL S  &mt LEFT_ALT D  &mt LEFT_GUI F       &lt 6 G    &kp H                        &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT            &mt LCTRL Z       &mt LEFT_ALT X      &mt LS(C) C     &mt LS(V) V          &kp B      &kp N                        &kp M            &kp COMMA        &mt RIGHT_ALT DOT    &mt RIGHT_CONTROL FSLH     &to 1
+&kp LSHFT            &mt LCTRL Z       &mt LEFT_ALT X      &mt LS(C) C     &mt LS(V) V          &kp B      &kp N                        &kp M            &kp COMMA        &mt RIGHT_ALT DOT    &mt BACKSLASH FSLH         &to 1
                                                            &lt 7 ENTER     &mt LS(ENTER) ENTER  &mo 3      &mt LC(BACKSPACE) BACKSPACE  &lt 7 SPACE      &mo 4
             >;
         };
@@ -125,7 +125,7 @@
             bindings = <
 &kp TILDE  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4   &mt F5 NUMBER_5         &mt F6 NUMBER_6        &mt F7 NUMBER_7    &mt F8 NUMBER_8  &mt F9 NUMBER_9  &mt F10 NUMBER_0   &kp BSPC
 &soft_off  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH         &kp DOLLAR        &kp PERCENT             &kp CARET              &kp AMPERSAND      &kp ASTERISK     &kp COLON        &kp DOUBLE_QUOTES  &kp PIPE
-&kp EQUAL  &kp PLUS         &kp MINUS        &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp QUESTION     &kp LESS_THAN      &kp GREATER_THAN
+&kp EQUAL  &kp PLUS         &kp MINUS        &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp LESS_THAN    &mt PIPE QUESTION  &kp GREATER_THAN
                                              &kp LGUI         &studio_unlock    &mt LS(ENTER) ENTER     &mt SPACE BACKSPACE    &trans             &trans
             >;
         };
