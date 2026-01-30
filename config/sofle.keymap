@@ -3,8 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 6000
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15
+
 #include "mouse.dtsi"
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
@@ -19,7 +21,6 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-
 
 &mmv {
     acceleration-exponent = <1>;      // 1
@@ -42,7 +43,7 @@
     };
 };
 
-behaviors {
+&behaviors {
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP";
