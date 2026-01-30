@@ -44,28 +44,27 @@
 };
 
 &behaviors {
-        mt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            bindings = <&kp>, <&kp>;
+    mt: mod_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOD_TAP";
+        #binding-cells = <2>;
+        tapping-term-ms = <300>;
+        bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
-            require-prior-idle-ms = <100>;
-        };
-
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            bindings = <&mo>, <&kp>;
-
-            flavor = "balanced";
-        };
+        flavor = "balanced";
+        require-prior-idle-ms = <100>;
     };
 
+    lt: layer_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYER_TAP";
+        #binding-cells = <2>;
+        tapping-term-ms = <300>;
+        bindings = <&mo>, <&kp>;
+
+        flavor = "balanced";
+    };
+}; // Don't forget this closing brace and semicolon
 
 / {
     // Activate ADJUST layer by pressing raise and lower
